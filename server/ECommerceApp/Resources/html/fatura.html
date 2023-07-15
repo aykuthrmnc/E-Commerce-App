@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatura</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /*        @media print {
+            @page {
+                width: 21cm;
+                height: 29.7cm;
+                margin: 0 auto;
+            }
+        }*/
+
+        body {
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0 auto;
+        }
+
+        .invoice-title {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .invoice-header,
+        .invoice-footer {
+            padding: 20px;
+        }
+
+        .invoice-header {
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-footer {
+            border-top: 1px solid #eee;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .invoice-items {
+            padding: 20px;
+            display: flex;
+            gap: 30%;
+        }
+
+        .invoice-item {
+            margin-bottom: 10px;
+        }
+
+            .invoice-item .item-name {
+                font-weight: bold;
+            }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .invoice-left {
+            width: 30%;
+        }
+
+        .invoice-center {
+            width: 15%;
+            text-align: center;
+        }
+
+        .invoice-right {
+            width: 30%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="invoice-header">
+            <div class="invoice-left">
+                <h1 class="invoice-title">Fatura</h1>
+                <strong>AYKUT HARMANCI</strong>
+                <div><strong>Adres:</strong> Sancak Mahallesi M.T.A. Lojmanları F Blok 5. Kat No:9 Selçuklu/KONYA</div>
+                <div><strong>Tel:</strong> +905555555555</div>
+                <div><strong>Web Sitesi:</strong> aykuthrmnc.com</div>
+            </div>
+            <div class="invoice-center">
+                <img src="https://localhost:44303/resources/html/gib_400px.png" />
+                <strong>E-Arşiv Fatura</strong>
+            </div>
+            <div class="invoice-right">
+                <div><strong>Fatura Tipi:</strong> SATIS</div>
+                <div><strong>Sipariş Tarihi:</strong> 01.01.0001</div>
+                <div><strong>Sipariş Numarası:</strong> 123456789</div>
+            </div>
+        </div>
+        <div class="invoice-items">
+            <div class="invoice-item">
+                <div class="item-name">Teslimat Adresi</div>
+                <div>Sancak Mahallesi M.T.A. Lojmanları F Blok 5. Kat No:9 Selçuklu/KONYA</div>
+            </div>
+            <div class="invoice-item">
+                <div class="item-name">Fatura Adresi</div>
+                <div>Sancak Mahallesi M.T.A. Lojmanları F Blok 5. Kat No:9 Selçuklu/KONYA</div>
+            </div>
+        </div>
+        <div class="invoice-footer">
+            <div>AYKUT HARMANCI</div>
+        </div>
+    </div>
+</body>
+</html>
